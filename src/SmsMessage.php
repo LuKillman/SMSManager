@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace SimPod\SmsManager;
 
 use SimPod\SmsManager\Exception\NoRecipientsProvided;
-use function count;
 
 class SmsMessage
 {
@@ -41,7 +40,7 @@ class SmsMessage
         $this->message = $message;
 
         if ($requestTypeHigh === null) {
-            $requestTypeHigh = RequestType::getRequestTypeHigh();
+            $requestTypeHigh = RequestType::High;
         }
         $this->requestType = $requestTypeHigh;
         $this->sender      = $sender;

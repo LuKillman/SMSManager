@@ -37,13 +37,13 @@ final class SmsMessageTest extends TestCase
     }
 
     /**
-     * @return mixed[][]
+     * @return RequestType[]|null[]
      */
     public function dataProviderConstruct() : array
     {
         return [
-            [RequestType::getRequestTypeHigh(), null],
-            [RequestType::getRequestTypeLow(), RequestType::getRequestTypeLow()],
+            [RequestType::High, null],
+            [RequestType::LowCost, RequestType::LowCost],
         ];
     }
 }
